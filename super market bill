@@ -1,0 +1,30 @@
+rice=int(650)
+oil=int(790)
+bis=int(50)
+pan=int(120)
+sal=int(45)
+cname=input('Enter customer name:')
+cphno=input('Enter customer phone number:')
+riceq=int(input('Enter no of rice bags:')) 
+oilq=int(input('Enter no of oil packets:')) 
+bisq=int(input('Enter no of biscut packets:'))
+panq=int(input('Enter no of paneer packets:')) 
+salq=int(input('Enter no of salt packets:'))
+bill=(rice*riceq)+(oil*oilq)+(bis*bisq)+(pan*panq)+(sal*salq)
+if bill>5000:
+    dis=bill*10/100 
+    tax=0 
+if bill>=3000:
+    dis=bill*8/100 
+    tax=0 
+elif bill>=2000:
+    dis=bill*5/100
+    if bill>=1000:
+       dis=bill*3/100 
+    if bill>=3000:
+           tax=bill*10/100
+else:
+    tax=bill*18/100
+mainbill=bill-dis+tax 
+print('bill amount:',mainbill)
+
